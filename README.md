@@ -6,7 +6,7 @@ for jetson platform with jetpack, ubuntu 18.04
 3. opencv
 
 
-# Jetson Orin 세팅
+# Jetson platform 세팅
 
 # Jetpack 설치하기
 
@@ -74,14 +74,11 @@ sudo apt install -y iwlwifi-modules
 
 [Install OpenCV on Jetson Orin Nano - Q-engineering](https://qengineering.eu/install-opencv-on-orin-nano.html)
 
-- sh 파일 일부 수정이 필요함
+- jetson nano 가 아닌 경우 sh 파일 일부 수정이 필요함
+- jetson nano 인 경우는 위의 사이트의 순서를 따라가시면 됩니다.
 - **Orin Nano가 아닌, 다른 Orin 시리즈인 경우**
 1. 위쪽 부분에 `if [[ $model == *"Orin"* ]]; then` 부분에서 `$model` 부분을 지우고 똑같이 `"Orin"` 으로 바꾸어서 항상 오린 설정을 적용하도록 한다.
-2. 그리고 바로 안쪽의 `NO_JOB=` 뒤의 숫자을 코어 갯수+2 정도로 바꾸어 주면 더욱 빨리 빌드할 수 있다. 시간차가 많으니 꼭 하자.
-3. 그냥 이걸로 하세요
-    
-    [OpenCV-4-10-0.sh](OpenCV-4-10-0.sh)
-    
+2. 그리고 바로 안쪽의 `NO_JOB=` 뒤의 숫자을 코어 갯수+2 정도로 바꾸어 주면 더욱 빨리 빌드할 수 있다. 시간차가 많으니 꼭 하는게 좋습니다.    
 
 # 한글 입력 설정
 
